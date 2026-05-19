@@ -112,6 +112,24 @@ metra-large-daylight-light.js
 metra-large-rose-light.js
 ```
 
+Chicago OTC outbound small-widget scripts are separate because they read `docs/up-n-otc-outbound.json`:
+
+```text
+metra-small-otc-outbound-widget.js
+metra-small-otc-outbound-midnight.js
+metra-small-otc-outbound-midnight-light.js
+metra-small-otc-outbound-lakeshore.js
+metra-small-otc-outbound-lakeshore-light.js
+metra-small-otc-outbound-signal.js
+metra-small-otc-outbound-signal-light.js
+metra-small-otc-outbound-ember.js
+metra-small-otc-outbound-ember-light.js
+metra-small-otc-outbound-daylight.js
+metra-small-otc-outbound-daylight-light.js
+metra-small-otc-outbound-rose.js
+metra-small-otc-outbound-rose-light.js
+```
+
 Light theme palette JSON files are generated under `docs/themes/`, one per widget size and theme. Example:
 
 ```text
