@@ -61,3 +61,12 @@ Regenerate the large-widget commute JSON after refreshing `schedule.zip`:
 ```text
 python scripts/build_large_widget_schedule.py
 ```
+
+## Large Widget Colors
+
+The large widget currently uses:
+
+- `#111318` for the widget background.
+- `#F4F7FB` for standard departure and arrival times.
+- `#9AA4B2` for secondary text: headers, service pattern, train numbers, relative times, footer, and the muted `to`.
+- `#5EC2FF` for emphasis: the next train in each schedule and error title text.

@@ -111,7 +111,7 @@ function addHeader(widget, schedule, pattern) {
   service.textColor = SECONDARY_TEXT;
   service.lineLimit = 1;
 
-  widget.addSpacer(7);
+  widget.addSpacer(9);
 }
 
 function addSection(widget, leg, trips, nowMinutes) {
@@ -199,7 +199,7 @@ function buildWidget(schedule) {
     const trips = upcomingTrips(leg, pattern, nowMinutes, rowsPerSection);
     addSection(widget, leg, trips, nowMinutes);
     if (index < sections.length - 1) {
-      widget.addSpacer(9);
+      widget.addSpacer(12);
     }
   }
 
