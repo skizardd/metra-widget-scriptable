@@ -8,6 +8,8 @@ GitHub repo: <https://github.com/skizardd/metra-widget-scriptable>
 
 Published schedule fixture: <https://skizardd.github.io/metra-widget-scriptable/schedule.json>
 
+UP-N OTC outbound companion data: <https://skizardd.github.io/metra-widget-scriptable/up-n-otc-outbound.json>
+
 ## Repository Layout
 
 ```text
