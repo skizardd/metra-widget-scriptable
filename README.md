@@ -64,9 +64,29 @@ python scripts/build_large_widget_schedule.py
 
 ## Large Widget Colors
 
-The large widget currently uses:
+Set the large widget parameter to one of these theme names:
 
-- `#111318` for the widget background.
-- `#F4F7FB` for standard departure and arrival times.
-- `#9AA4B2` for secondary text: headers, service pattern, train numbers, relative times, footer, and the muted `to`.
-- `#5EC2FF` for emphasis: the next train in each schedule and error title text.
+```text
+midnight
+lakeshore
+signal
+ember
+daylight
+```
+
+The same values also work as `theme=midnight`, `theme=lakeshore`, etc.
+
+| Theme | Background | Primary Text | Secondary Text | Accent |
+| --- | --- | --- | --- | --- |
+| `midnight` | `#111318` | `#F4F7FB` | `#9AA4B2` | `#5EC2FF` |
+| `lakeshore` | `#081B22` | `#EAF8FA` | `#8FB7C0` | `#42D6CA` |
+| `signal` | `#10170F` | `#F1F8EA` | `#A3B99A` | `#8FD14F` |
+| `ember` | `#1A1214` | `#FFF3F0` | `#C7A3A8` | `#FF7A59` |
+| `daylight` | `#F7FAFC` | `#17212B` | `#667581` | `#0B75D1` |
+
+Color roles:
+
+- Background fills the widget.
+- Primary text is used for standard departure and arrival times.
+- Secondary text is used for headers, service pattern, train numbers, relative times, footer, and the muted `to`.
+- Accent is used for the next train in each schedule and error title text.

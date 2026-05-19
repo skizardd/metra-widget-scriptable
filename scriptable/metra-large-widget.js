@@ -3,10 +3,59 @@
 const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json?v=large-layout-2";
 const CACHE_FILE = "metra-large-widget-schedule-v2.json";
 const CACHE_MAX_AGE_HOURS = 24 * 7;
-const BACKGROUND = new Color("#111318");
-const PRIMARY_TEXT = new Color("#F4F7FB");
-const SECONDARY_TEXT = new Color("#9AA4B2");
-const ACCENT = new Color("#5EC2FF");
+const THEMES = {
+  midnight: {
+    background: "#111318",
+    primary: "#F4F7FB",
+    secondary: "#9AA4B2",
+    accent: "#5EC2FF",
+  },
+  lakeshore: {
+    background: "#081B22",
+    primary: "#EAF8FA",
+    secondary: "#8FB7C0",
+    accent: "#42D6CA",
+  },
+  signal: {
+    background: "#10170F",
+    primary: "#F1F8EA",
+    secondary: "#A3B99A",
+    accent: "#8FD14F",
+  },
+  ember: {
+    background: "#1A1214",
+    primary: "#FFF3F0",
+    secondary: "#C7A3A8",
+    accent: "#FF7A59",
+  },
+  daylight: {
+    background: "#F7FAFC",
+    primary: "#17212B",
+    secondary: "#667581",
+    accent: "#0B75D1",
+  },
+};
+const THEME_NAME = themeNameFromParameter(args.widgetParameter);
+const THEME = THEMES[THEME_NAME] || THEMES.midnight;
+const BACKGROUND = new Color(THEME.background);
+const PRIMARY_TEXT = new Color(THEME.primary);
+const SECONDARY_TEXT = new Color(THEME.secondary);
+const ACCENT = new Color(THEME.accent);
+
+function themeNameFromParameter(parameter) {
+  const raw = String(parameter || "midnight").trim().toLowerCase();
+  if (!raw) return "midnight";
+
+  const parts = raw.split(/[;,\s]+/);
+  for (const part of parts) {
+    if (THEMES[part]) return part;
+    if (part.indexOf("theme=") === 0) {
+      return part.slice("theme=".length);
+    }
+  }
+
+  return raw;
+}
 
 async function loadSchedule() {
   const fm = FileManager.local();
