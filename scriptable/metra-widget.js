@@ -105,6 +105,14 @@ function relativeText(departure) {
   return `in ${minutesUntil}m`;
 }
 
+function displayTime(departure) {
+  const hours24 = Math.floor(departure.minutes / 60);
+  const minutes = departure.minutes % 60;
+  const period = hours24 >= 12 ? "PM" : "AM";
+  const hours12 = hours24 % 12 || 12;
+  return `${hours12}:${String(minutes).padStart(2, "0")} ${period}`;
+}
+
 function buildWidget(schedule, departures, stopId, direction) {
   const stop = schedule.stops?.[stopId];
   const stopName = stop?.name || stopId;
@@ -132,9 +140,10 @@ function buildWidget(schedule, departures, stopId, direction) {
       const row = widget.addStack();
       row.centerAlignContent();
 
-      const timeText = row.addText(departure.time);
-      timeText.font = Font.boldMonospacedSystemFont(index === 0 ? 20 : 18);
+      const timeText = row.addText(displayTime(departure));
+      timeText.font = Font.boldMonospacedSystemFont(index === 0 ? 18 : 16);
       timeText.textColor = index === 0 ? new Color("#5EC2FF") : Color.white();
+      timeText.lineLimit = 1;
 
       row.addSpacer();
 
