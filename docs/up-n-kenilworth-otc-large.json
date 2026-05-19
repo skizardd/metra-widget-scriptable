@@ -1,6 +1,6 @@
 {
   "version": "gtfs-2026-05-19",
-  "generated_at": "2026-05-19T21:04:35Z",
+  "generated_at": "2026-05-19T21:39:30Z",
   "source": "https://schedules.metrarail.com/gtfs/schedule.zip",
   "route": {
     "id": "UP-N",
@@ -8,7 +8,7 @@
   },
   "widget": {
     "family": "large",
-    "rows_per_section": 5,
+    "rows_per_section": 6,
     "sections": [
       "kenilworth_inbound",
       "otc_outbound"

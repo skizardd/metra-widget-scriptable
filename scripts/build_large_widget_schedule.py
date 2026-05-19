@@ -208,7 +208,7 @@ def main() -> None:
         },
         "widget": {
             "family": "large",
-            "rows_per_section": 5,
+            "rows_per_section": 6,
             "sections": ["kenilworth_inbound", "otc_outbound"],
         },
         "time_format": "HH:MM",

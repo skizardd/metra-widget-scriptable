@@ -1,7 +1,7 @@
 // metra-large-widget.js - paste into Scriptable and use with a large widget.
 
-const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json?v=60b5df7";
-const CACHE_FILE = "metra-large-widget-schedule.json";
+const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json?v=large-layout-2";
+const CACHE_FILE = "metra-large-widget-schedule-v2.json";
 const CACHE_MAX_AGE_HOURS = 24 * 7;
 const BACKGROUND = new Color("#111318");
 const PRIMARY_TEXT = new Color("#F4F7FB");
@@ -91,7 +91,7 @@ function upcomingTrips(leg, pattern, nowMinutes, limit) {
 
 function applyBaseStyle(widget) {
   widget.backgroundColor = BACKGROUND;
-  widget.setPadding(14, 14, 12, 14);
+  widget.setPadding(12, 12, 10, 12);
   widget.refreshAfterDate = new Date(Date.now() + 5 * 60 * 1000);
 }
 
@@ -100,27 +100,27 @@ function addHeader(widget, schedule, pattern) {
   row.centerAlignContent();
 
   const title = row.addText("UP-N COMMUTE");
-  title.font = Font.boldSystemFont(12);
+  title.font = Font.boldSystemFont(13);
   title.textColor = SECONDARY_TEXT;
   title.lineLimit = 1;
 
   row.addSpacer();
 
   const service = row.addText(pattern.toUpperCase());
-  service.font = Font.systemFont(11);
+  service.font = Font.systemFont(12);
   service.textColor = SECONDARY_TEXT;
   service.lineLimit = 1;
 
-  widget.addSpacer(8);
+  widget.addSpacer(7);
 }
 
 function addSection(widget, leg, trips, nowMinutes) {
   const title = widget.addText(leg.short_label);
-  title.font = Font.boldSystemFont(12);
+  title.font = Font.boldSystemFont(13);
   title.textColor = SECONDARY_TEXT;
   title.lineLimit = 1;
 
-  widget.addSpacer(3);
+  widget.addSpacer(4);
 
   if (trips.length === 0) {
     const empty = widget.addText("No more trains today");
@@ -135,16 +135,30 @@ function addSection(widget, leg, trips, nowMinutes) {
     row.centerAlignContent();
 
     const train = row.addText(`#${trip.train}`);
-    train.font = Font.systemFont(index === 0 ? 12 : 11);
+    train.font = Font.systemFont(index === 0 ? 13 : 12);
     train.textColor = index === 0 ? ACCENT : SECONDARY_TEXT;
     train.lineLimit = 1;
 
-    row.addSpacer(8);
+    row.addSpacer(7);
 
-    const times = row.addText(`${formatTime(trip.depart_minutes)} to ${formatTime(trip.arrive_minutes)}`);
-    times.font = Font.boldMonospacedSystemFont(index === 0 ? 13 : 12);
-    times.textColor = index === 0 ? ACCENT : PRIMARY_TEXT;
-    times.lineLimit = 1;
+    const depart = row.addText(formatTime(trip.depart_minutes));
+    depart.font = Font.boldMonospacedSystemFont(index === 0 ? 15 : 14);
+    depart.textColor = index === 0 ? ACCENT : PRIMARY_TEXT;
+    depart.lineLimit = 1;
+
+    row.addSpacer(4);
+
+    const to = row.addText("to");
+    to.font = Font.systemFont(index === 0 ? 11 : 10);
+    to.textColor = SECONDARY_TEXT;
+    to.lineLimit = 1;
+
+    row.addSpacer(4);
+
+    const arrive = row.addText(formatTime(trip.arrive_minutes));
+    arrive.font = Font.boldMonospacedSystemFont(index === 0 ? 15 : 14);
+    arrive.textColor = index === 0 ? ACCENT : PRIMARY_TEXT;
+    arrive.lineLimit = 1;
 
     row.addSpacer();
 
@@ -153,10 +167,8 @@ function addSection(widget, leg, trips, nowMinutes) {
     relative.textColor = SECONDARY_TEXT;
     relative.lineLimit = 1;
 
-    widget.addSpacer(3);
+    widget.addSpacer(4);
   }
-
-  widget.addSpacer(6);
 }
 
 function addFooter(widget, schedule) {
@@ -173,7 +185,7 @@ function buildWidget(schedule) {
   const pattern = activeServicePattern(schedule, now);
   const nowMinutes = logicalNowMinutes(now);
   const widgetConfig = schedule.widget || {};
-  const rowsPerSection = widgetConfig.rows_per_section || 5;
+  const rowsPerSection = widgetConfig.rows_per_section || 6;
   const sections = widgetConfig.sections || ["kenilworth_inbound", "otc_outbound"];
 
   const widget = new ListWidget();
@@ -181,10 +193,14 @@ function buildWidget(schedule) {
 
   addHeader(widget, schedule, pattern);
 
-  for (const key of sections) {
+  for (let index = 0; index < sections.length; index++) {
+    const key = sections[index];
     const leg = schedule.legs[key];
     const trips = upcomingTrips(leg, pattern, nowMinutes, rowsPerSection);
     addSection(widget, leg, trips, nowMinutes);
+    if (index < sections.length - 1) {
+      widget.addSpacer(9);
+    }
   }
 
   addFooter(widget, schedule);
