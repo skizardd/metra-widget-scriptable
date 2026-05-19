@@ -195,7 +195,7 @@ function buildWidget(schedule, departures) {
   widget.setPadding(12, 14, 12, 14);
   widget.refreshAfterDate = new Date(Date.now() + 5 * 60 * 1000);
 
-  const header = widget.addText("CHICAGO OTC OUTBOUND");
+  const header = widget.addText("OTC BOUND");
   header.font = Font.boldSystemFont(11);
   header.textColor = SECONDARY_TEXT;
   header.lineLimit = 1;
@@ -211,13 +211,6 @@ function buildWidget(schedule, departures) {
     for (const [index, departure] of departures.entries()) {
       const row = widget.addStack();
       row.centerAlignContent();
-
-      const train = row.addText(`#${departure.train}`);
-      train.font = Font.systemFont(index === 0 ? 12 : 11);
-      train.textColor = index === 0 ? ACCENT : SECONDARY_TEXT;
-      train.lineLimit = 1;
-
-      row.addSpacer(6);
 
       const time = row.addText(formatTime(departure.minutes));
       time.font = Font.boldMonospacedSystemFont(index === 0 ? 17 : 15);
