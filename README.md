@@ -4,6 +4,10 @@ A personal Scriptable widget for showing upcoming Metra departures from a config
 
 The first version uses a small hand-authored `docs/schedule.json` fixture so the widget can be tested before the GTFS preprocessor exists. Once the widget shape feels right, `build.py` will generate the same JSON schema from Metra GTFS static schedule data.
 
+GitHub repo: <https://github.com/skizardd/metra-widget-scriptable>
+
+Published schedule fixture: <https://skizardd.github.io/metra-widget-scriptable/schedule.json>
+
 ## Repository Layout
 
 ```text
@@ -39,14 +43,6 @@ KENILWORTH:outbound
 
 ## GitHub Pages
 
-After pushing this repo to GitHub:
+This repo is configured for GitHub Pages from the `main` branch and `/docs` folder.
 
-1. Open the repository settings.
-2. Go to Pages.
-3. Set source to `Deploy from a branch`.
-4. Set branch to `main` and folder to `/docs`.
-5. Replace `DATA_URL` in `scriptable/metra-widget.js` with:
-
-```text
-https://YOUR_USER.github.io/YOUR_REPO/schedule.json
-```
+The Scriptable widget reads from `https://skizardd.github.io/metra-widget-scriptable/schedule.json`.
