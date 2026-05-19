@@ -34,6 +34,12 @@ const THEMES = {
     secondary: "#667581",
     accent: "#0B75D1",
   },
+  rose: {
+    background: "#2A111F",
+    primary: "#FFF1F7",
+    secondary: "#D8A8BE",
+    accent: "#FF8CC6",
+  },
 };
 const THEME_NAME = themeNameFromParameter(args.widgetParameter);
 const THEME = THEMES[THEME_NAME] || THEMES.midnight;

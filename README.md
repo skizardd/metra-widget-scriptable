@@ -72,6 +72,7 @@ lakeshore
 signal
 ember
 daylight
+rose
 ```
 
 The same values also work as `theme=midnight`, `theme=lakeshore`, etc.
@@ -83,6 +84,7 @@ The same values also work as `theme=midnight`, `theme=lakeshore`, etc.
 | `signal` | `#10170F` | `#F1F8EA` | `#A3B99A` | `#8FD14F` |
 | `ember` | `#1A1214` | `#FFF3F0` | `#C7A3A8` | `#FF7A59` |
 | `daylight` | `#F7FAFC` | `#17212B` | `#667581` | `#0B75D1` |
+| `rose` | `#2A111F` | `#FFF1F7` | `#D8A8BE` | `#FF8CC6` |
 
 Color roles:
 
