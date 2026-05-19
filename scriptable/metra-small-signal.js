@@ -1,10 +1,10 @@
-// metra-widget.js - paste into Scriptable and add as a widget.
+// metra-small-signal.js - paste into Scriptable and add as a small widget.
 
 const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/schedule.json";
 const CACHE_FILE = "metra-schedule.json";
 const CACHE_MAX_AGE_HOURS = 24 * 7;
 const DEFAULT_PARAM = "KENILWORTH:inbound";
-const FIXED_THEME = null;
+const FIXED_THEME = "signal";
 const THEMES = {
   midnight: {
     background: "#111318",

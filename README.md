@@ -77,6 +77,29 @@ rose
 
 The same values also work as `theme=midnight`, `theme=lakeshore`, etc.
 
+Standalone themed scripts are also generated for direct use in Scriptable:
+
+```text
+metra-small-midnight.js
+metra-small-lakeshore.js
+metra-small-signal.js
+metra-small-ember.js
+metra-small-daylight.js
+metra-small-rose.js
+metra-large-midnight.js
+metra-large-lakeshore.js
+metra-large-signal.js
+metra-large-ember.js
+metra-large-daylight.js
+metra-large-rose.js
+```
+
+Regenerate them after changing either generic widget script:
+
+```text
+powershell -ExecutionPolicy Bypass -File scripts/build_themed_widget_scripts.ps1
+```
+
 | Theme | Background | Primary Text | Secondary Text | Accent |
 | --- | --- | --- | --- | --- |
 | `midnight` | `#111318` | `#F4F7FB` | `#9AA4B2` | `#5EC2FF` |

@@ -1,9 +1,9 @@
-// metra-large-widget.js - paste into Scriptable and use with a large widget.
+// metra-large-lakeshore.js - paste into Scriptable and use with a large widget.
 
 const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json?v=large-layout-2";
 const CACHE_FILE = "metra-large-widget-schedule-v2.json";
 const CACHE_MAX_AGE_HOURS = 24 * 7;
-const FIXED_THEME = null;
+const FIXED_THEME = "lakeshore";
 const THEMES = {
   midnight: {
     background: "#111318",
