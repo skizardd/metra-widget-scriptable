@@ -1,7 +1,6 @@
 // metra-widget.js - paste into Scriptable and add as a widget.
 
-// Replace this with your GitHub Pages URL after publishing docs/schedule.json.
-const DATA_URL = "https://example.com/metra-schedule/schedule.json";
+const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/schedule.json";
 const CACHE_FILE = "metra-schedule.json";
 const CACHE_MAX_AGE_HOURS = 24 * 7;
 const DEFAULT_PARAM = "KENILWORTH:inbound";
