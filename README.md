@@ -10,6 +10,8 @@ Published schedule fixture: <https://skizardd.github.io/metra-widget-scriptable/
 
 UP-N OTC outbound companion data: <https://skizardd.github.io/metra-widget-scriptable/up-n-otc-outbound.json>
 
+Large widget commute data: <https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json>
+
 ## Repository Layout
 
 ```text
@@ -17,8 +19,11 @@ UP-N OTC outbound companion data: <https://skizardd.github.io/metra-widget-scrip
 ├── build.py
 ├── docs/
 │   └── schedule.json
+├── scripts/
+│   └── build_large_widget_schedule.py
 └── scriptable/
-    └── metra-widget.js
+    ├── metra-widget.js
+    └── metra-large-widget.js
 ```
 
 ## Widget Parameter
@@ -48,3 +53,11 @@ KENILWORTH:outbound
 This repo is configured for GitHub Pages from the `main` branch and `/docs` folder.
 
 The Scriptable widget reads from `https://skizardd.github.io/metra-widget-scriptable/schedule.json`.
+
+The large Scriptable widget reads from `https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json`.
+
+Regenerate the large-widget commute JSON after refreshing `schedule.zip`:
+
+```text
+python scripts/build_large_widget_schedule.py
+```

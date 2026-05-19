@@ -1,0 +1,1007 @@
+{
+  "version": "gtfs-2026-05-19",
+  "generated_at": "2026-05-19T21:04:35Z",
+  "source": "https://schedules.metrarail.com/gtfs/schedule.zip",
+  "route": {
+    "id": "UP-N",
+    "name": "Union Pacific North"
+  },
+  "widget": {
+    "family": "large",
+    "rows_per_section": 5,
+    "sections": [
+      "kenilworth_inbound",
+      "otc_outbound"
+    ]
+  },
+  "time_format": "HH:MM",
+  "time_zone": "America/Chicago",
+  "service_ids": {
+    "weekday": [
+      "A1A"
+    ],
+    "saturday": [
+      "A2A"
+    ],
+    "sunday": [
+      "A2A"
+    ]
+  },
+  "exceptions": {
+    "2026-05-25": "saturday"
+  },
+  "legs": {
+    "kenilworth_inbound": {
+      "label": "Kenilworth to Chicago OTC",
+      "short_label": "KENILWORTH -> OTC",
+      "direction": "inbound",
+      "direction_id": "1",
+      "origin": {
+        "id": "KENILWORTH",
+        "name": "Kenilworth"
+      },
+      "destination": {
+        "id": "OTC",
+        "name": "Chicago OTC"
+      },
+      "departures": {
+        "weekday": [
+          {
+            "train": "300",
+            "depart": "04:47",
+            "depart_minutes": 287,
+            "arrive": "05:25",
+            "arrive_minutes": 325,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "302",
+            "depart": "05:47",
+            "depart_minutes": 347,
+            "arrive": "06:25",
+            "arrive_minutes": 385,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "390",
+            "depart": "06:17",
+            "depart_minutes": 377,
+            "arrive": "06:55",
+            "arrive_minutes": 415,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "304",
+            "depart": "06:47",
+            "depart_minutes": 407,
+            "arrive": "07:25",
+            "arrive_minutes": 445,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "308",
+            "depart": "07:19",
+            "depart_minutes": 439,
+            "arrive": "07:57",
+            "arrive_minutes": 477,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "312",
+            "depart": "07:49",
+            "depart_minutes": 469,
+            "arrive": "08:27",
+            "arrive_minutes": 507,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "392",
+            "depart": "07:57",
+            "depart_minutes": 477,
+            "arrive": "08:35",
+            "arrive_minutes": 515,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "316",
+            "depart": "08:19",
+            "depart_minutes": 499,
+            "arrive": "08:57",
+            "arrive_minutes": 537,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "320",
+            "depart": "08:49",
+            "depart_minutes": 529,
+            "arrive": "09:27",
+            "arrive_minutes": 567,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "324",
+            "depart": "09:19",
+            "depart_minutes": 559,
+            "arrive": "09:57",
+            "arrive_minutes": 597,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "326",
+            "depart": "10:12",
+            "depart_minutes": 612,
+            "arrive": "10:50",
+            "arrive_minutes": 650,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "330",
+            "depart": "11:12",
+            "depart_minutes": 672,
+            "arrive": "11:50",
+            "arrive_minutes": 710,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "334",
+            "depart": "12:12",
+            "depart_minutes": 732,
+            "arrive": "12:50",
+            "arrive_minutes": 770,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "338",
+            "depart": "13:12",
+            "depart_minutes": 792,
+            "arrive": "13:50",
+            "arrive_minutes": 830,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "342",
+            "depart": "14:12",
+            "depart_minutes": 852,
+            "arrive": "14:50",
+            "arrive_minutes": 890,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "346",
+            "depart": "15:12",
+            "depart_minutes": 912,
+            "arrive": "15:50",
+            "arrive_minutes": 950,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "348",
+            "depart": "15:49",
+            "depart_minutes": 949,
+            "arrive": "16:27",
+            "arrive_minutes": 987,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "396",
+            "depart": "16:19",
+            "depart_minutes": 979,
+            "arrive": "16:57",
+            "arrive_minutes": 1017,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "354",
+            "depart": "17:12",
+            "depart_minutes": 1032,
+            "arrive": "17:50",
+            "arrive_minutes": 1070,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "358",
+            "depart": "17:42",
+            "depart_minutes": 1062,
+            "arrive": "18:20",
+            "arrive_minutes": 1100,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "360",
+            "depart": "18:12",
+            "depart_minutes": 1092,
+            "arrive": "18:50",
+            "arrive_minutes": 1130,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "362",
+            "depart": "18:42",
+            "depart_minutes": 1122,
+            "arrive": "19:20",
+            "arrive_minutes": 1160,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "366",
+            "depart": "19:12",
+            "depart_minutes": 1152,
+            "arrive": "19:50",
+            "arrive_minutes": 1190,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "368",
+            "depart": "20:12",
+            "depart_minutes": 1212,
+            "arrive": "20:50",
+            "arrive_minutes": 1250,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "370",
+            "depart": "21:12",
+            "depart_minutes": 1272,
+            "arrive": "21:50",
+            "arrive_minutes": 1310,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "372",
+            "depart": "22:12",
+            "depart_minutes": 1332,
+            "arrive": "22:50",
+            "arrive_minutes": 1370,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "374",
+            "depart": "23:12",
+            "depart_minutes": 1392,
+            "arrive": "23:50",
+            "arrive_minutes": 1430,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "376",
+            "depart": "00:12",
+            "depart_minutes": 1452,
+            "arrive": "00:50",
+            "arrive_minutes": 1490,
+            "headsign": "Chicago OTC"
+          }
+        ],
+        "saturday": [
+          {
+            "train": "800",
+            "depart": "05:12",
+            "depart_minutes": 312,
+            "arrive": "05:50",
+            "arrive_minutes": 350,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "802",
+            "depart": "06:12",
+            "depart_minutes": 372,
+            "arrive": "06:50",
+            "arrive_minutes": 410,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "804",
+            "depart": "07:12",
+            "depart_minutes": 432,
+            "arrive": "07:50",
+            "arrive_minutes": 470,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "806",
+            "depart": "08:12",
+            "depart_minutes": 492,
+            "arrive": "08:50",
+            "arrive_minutes": 530,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "808",
+            "depart": "09:12",
+            "depart_minutes": 552,
+            "arrive": "09:50",
+            "arrive_minutes": 590,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "810",
+            "depart": "10:12",
+            "depart_minutes": 612,
+            "arrive": "10:50",
+            "arrive_minutes": 650,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "812",
+            "depart": "11:12",
+            "depart_minutes": 672,
+            "arrive": "11:50",
+            "arrive_minutes": 710,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "814",
+            "depart": "13:12",
+            "depart_minutes": 792,
+            "arrive": "13:50",
+            "arrive_minutes": 830,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "818",
+            "depart": "15:12",
+            "depart_minutes": 912,
+            "arrive": "15:50",
+            "arrive_minutes": 950,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "820",
+            "depart": "16:12",
+            "depart_minutes": 972,
+            "arrive": "16:50",
+            "arrive_minutes": 1010,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "822",
+            "depart": "17:12",
+            "depart_minutes": 1032,
+            "arrive": "17:50",
+            "arrive_minutes": 1070,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "824",
+            "depart": "18:12",
+            "depart_minutes": 1092,
+            "arrive": "18:50",
+            "arrive_minutes": 1130,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "828",
+            "depart": "20:12",
+            "depart_minutes": 1212,
+            "arrive": "20:50",
+            "arrive_minutes": 1250,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "830",
+            "depart": "21:12",
+            "depart_minutes": 1272,
+            "arrive": "21:50",
+            "arrive_minutes": 1310,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "834",
+            "depart": "23:12",
+            "depart_minutes": 1392,
+            "arrive": "23:50",
+            "arrive_minutes": 1430,
+            "headsign": "Chicago OTC"
+          }
+        ],
+        "sunday": [
+          {
+            "train": "800",
+            "depart": "05:12",
+            "depart_minutes": 312,
+            "arrive": "05:50",
+            "arrive_minutes": 350,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "802",
+            "depart": "06:12",
+            "depart_minutes": 372,
+            "arrive": "06:50",
+            "arrive_minutes": 410,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "804",
+            "depart": "07:12",
+            "depart_minutes": 432,
+            "arrive": "07:50",
+            "arrive_minutes": 470,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "806",
+            "depart": "08:12",
+            "depart_minutes": 492,
+            "arrive": "08:50",
+            "arrive_minutes": 530,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "808",
+            "depart": "09:12",
+            "depart_minutes": 552,
+            "arrive": "09:50",
+            "arrive_minutes": 590,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "810",
+            "depart": "10:12",
+            "depart_minutes": 612,
+            "arrive": "10:50",
+            "arrive_minutes": 650,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "812",
+            "depart": "11:12",
+            "depart_minutes": 672,
+            "arrive": "11:50",
+            "arrive_minutes": 710,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "814",
+            "depart": "13:12",
+            "depart_minutes": 792,
+            "arrive": "13:50",
+            "arrive_minutes": 830,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "818",
+            "depart": "15:12",
+            "depart_minutes": 912,
+            "arrive": "15:50",
+            "arrive_minutes": 950,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "820",
+            "depart": "16:12",
+            "depart_minutes": 972,
+            "arrive": "16:50",
+            "arrive_minutes": 1010,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "822",
+            "depart": "17:12",
+            "depart_minutes": 1032,
+            "arrive": "17:50",
+            "arrive_minutes": 1070,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "824",
+            "depart": "18:12",
+            "depart_minutes": 1092,
+            "arrive": "18:50",
+            "arrive_minutes": 1130,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "828",
+            "depart": "20:12",
+            "depart_minutes": 1212,
+            "arrive": "20:50",
+            "arrive_minutes": 1250,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "830",
+            "depart": "21:12",
+            "depart_minutes": 1272,
+            "arrive": "21:50",
+            "arrive_minutes": 1310,
+            "headsign": "Chicago OTC"
+          },
+          {
+            "train": "834",
+            "depart": "23:12",
+            "depart_minutes": 1392,
+            "arrive": "23:50",
+            "arrive_minutes": 1430,
+            "headsign": "Chicago OTC"
+          }
+        ]
+      }
+    },
+    "otc_outbound": {
+      "label": "Chicago OTC to Kenilworth",
+      "short_label": "OTC -> KENILWORTH",
+      "direction": "outbound",
+      "direction_id": "0",
+      "origin": {
+        "id": "OTC",
+        "name": "Chicago OTC"
+      },
+      "destination": {
+        "id": "KENILWORTH",
+        "name": "Kenilworth"
+      },
+      "departures": {
+        "weekday": [
+          {
+            "train": "303",
+            "depart": "05:32",
+            "depart_minutes": 332,
+            "arrive": "06:06",
+            "arrive_minutes": 366,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "305",
+            "depart": "06:02",
+            "depart_minutes": 362,
+            "arrive": "06:36",
+            "arrive_minutes": 396,
+            "headsign": "Winnetka"
+          },
+          {
+            "train": "309",
+            "depart": "06:40",
+            "depart_minutes": 400,
+            "arrive": "07:14",
+            "arrive_minutes": 434,
+            "headsign": "Highland Park"
+          },
+          {
+            "train": "391",
+            "depart": "07:02",
+            "depart_minutes": 422,
+            "arrive": "07:36",
+            "arrive_minutes": 456,
+            "headsign": "Winnetka"
+          },
+          {
+            "train": "311",
+            "depart": "07:32",
+            "depart_minutes": 452,
+            "arrive": "08:06",
+            "arrive_minutes": 486,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "313",
+            "depart": "08:02",
+            "depart_minutes": 482,
+            "arrive": "08:36",
+            "arrive_minutes": 516,
+            "headsign": "Winnetka"
+          },
+          {
+            "train": "315",
+            "depart": "08:32",
+            "depart_minutes": 512,
+            "arrive": "09:06",
+            "arrive_minutes": 546,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "319",
+            "depart": "09:32",
+            "depart_minutes": 572,
+            "arrive": "10:06",
+            "arrive_minutes": 606,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "321",
+            "depart": "10:02",
+            "depart_minutes": 602,
+            "arrive": "10:36",
+            "arrive_minutes": 636,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "323",
+            "depart": "10:32",
+            "depart_minutes": 632,
+            "arrive": "11:06",
+            "arrive_minutes": 666,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "327",
+            "depart": "11:32",
+            "depart_minutes": 692,
+            "arrive": "12:06",
+            "arrive_minutes": 726,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "331",
+            "depart": "12:32",
+            "depart_minutes": 752,
+            "arrive": "13:06",
+            "arrive_minutes": 786,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "335",
+            "depart": "13:32",
+            "depart_minutes": 812,
+            "arrive": "14:06",
+            "arrive_minutes": 846,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "337",
+            "depart": "14:02",
+            "depart_minutes": 842,
+            "arrive": "14:36",
+            "arrive_minutes": 876,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "341",
+            "depart": "15:02",
+            "depart_minutes": 902,
+            "arrive": "15:36",
+            "arrive_minutes": 936,
+            "headsign": "Highland Park"
+          },
+          {
+            "train": "345",
+            "depart": "15:40",
+            "depart_minutes": 940,
+            "arrive": "16:14",
+            "arrive_minutes": 974,
+            "headsign": "Highland Park"
+          },
+          {
+            "train": "349",
+            "depart": "16:10",
+            "depart_minutes": 970,
+            "arrive": "16:44",
+            "arrive_minutes": 1004,
+            "headsign": "Highland Park"
+          },
+          {
+            "train": "353",
+            "depart": "16:40",
+            "depart_minutes": 1000,
+            "arrive": "17:14",
+            "arrive_minutes": 1034,
+            "headsign": "Highland Park"
+          },
+          {
+            "train": "393",
+            "depart": "16:50",
+            "depart_minutes": 1010,
+            "arrive": "17:24",
+            "arrive_minutes": 1044,
+            "headsign": "Winnetka"
+          },
+          {
+            "train": "357",
+            "depart": "17:10",
+            "depart_minutes": 1030,
+            "arrive": "17:44",
+            "arrive_minutes": 1064,
+            "headsign": "Highland Park"
+          },
+          {
+            "train": "361",
+            "depart": "17:40",
+            "depart_minutes": 1060,
+            "arrive": "18:14",
+            "arrive_minutes": 1094,
+            "headsign": "Highland Park"
+          },
+          {
+            "train": "365",
+            "depart": "18:32",
+            "depart_minutes": 1112,
+            "arrive": "19:06",
+            "arrive_minutes": 1146,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "367",
+            "depart": "19:32",
+            "depart_minutes": 1172,
+            "arrive": "20:06",
+            "arrive_minutes": 1206,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "369",
+            "depart": "20:32",
+            "depart_minutes": 1232,
+            "arrive": "21:06",
+            "arrive_minutes": 1266,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "371",
+            "depart": "21:32",
+            "depart_minutes": 1292,
+            "arrive": "22:06",
+            "arrive_minutes": 1326,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "373",
+            "depart": "22:32",
+            "depart_minutes": 1352,
+            "arrive": "23:06",
+            "arrive_minutes": 1386,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "375",
+            "depart": "23:32",
+            "depart_minutes": 1412,
+            "arrive": "00:06",
+            "arrive_minutes": 1446,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "377",
+            "depart": "00:32",
+            "depart_minutes": 1472,
+            "arrive": "01:06",
+            "arrive_minutes": 1506,
+            "headsign": "Waukegan"
+          }
+        ],
+        "saturday": [
+          {
+            "train": "803",
+            "depart": "06:32",
+            "depart_minutes": 392,
+            "arrive": "07:06",
+            "arrive_minutes": 426,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "805",
+            "depart": "07:32",
+            "depart_minutes": 452,
+            "arrive": "08:06",
+            "arrive_minutes": 486,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "807",
+            "depart": "08:32",
+            "depart_minutes": 512,
+            "arrive": "09:06",
+            "arrive_minutes": 546,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "811",
+            "depart": "10:32",
+            "depart_minutes": 632,
+            "arrive": "11:06",
+            "arrive_minutes": 666,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "813",
+            "depart": "11:32",
+            "depart_minutes": 692,
+            "arrive": "12:06",
+            "arrive_minutes": 726,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "815",
+            "depart": "12:32",
+            "depart_minutes": 752,
+            "arrive": "13:06",
+            "arrive_minutes": 786,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "819",
+            "depart": "14:32",
+            "depart_minutes": 872,
+            "arrive": "15:06",
+            "arrive_minutes": 906,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "821",
+            "depart": "15:32",
+            "depart_minutes": 932,
+            "arrive": "16:06",
+            "arrive_minutes": 966,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "823",
+            "depart": "16:32",
+            "depart_minutes": 992,
+            "arrive": "17:06",
+            "arrive_minutes": 1026,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "825",
+            "depart": "17:32",
+            "depart_minutes": 1052,
+            "arrive": "18:06",
+            "arrive_minutes": 1086,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "827",
+            "depart": "18:32",
+            "depart_minutes": 1112,
+            "arrive": "19:06",
+            "arrive_minutes": 1146,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "829",
+            "depart": "19:32",
+            "depart_minutes": 1172,
+            "arrive": "20:06",
+            "arrive_minutes": 1206,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "833",
+            "depart": "21:32",
+            "depart_minutes": 1292,
+            "arrive": "22:06",
+            "arrive_minutes": 1326,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "835",
+            "depart": "23:02",
+            "depart_minutes": 1382,
+            "arrive": "23:36",
+            "arrive_minutes": 1416,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "301",
+            "depart": "00:32",
+            "depart_minutes": 1472,
+            "arrive": "01:06",
+            "arrive_minutes": 1506,
+            "headsign": "Kenosha"
+          }
+        ],
+        "sunday": [
+          {
+            "train": "803",
+            "depart": "06:32",
+            "depart_minutes": 392,
+            "arrive": "07:06",
+            "arrive_minutes": 426,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "805",
+            "depart": "07:32",
+            "depart_minutes": 452,
+            "arrive": "08:06",
+            "arrive_minutes": 486,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "807",
+            "depart": "08:32",
+            "depart_minutes": 512,
+            "arrive": "09:06",
+            "arrive_minutes": 546,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "811",
+            "depart": "10:32",
+            "depart_minutes": 632,
+            "arrive": "11:06",
+            "arrive_minutes": 666,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "813",
+            "depart": "11:32",
+            "depart_minutes": 692,
+            "arrive": "12:06",
+            "arrive_minutes": 726,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "815",
+            "depart": "12:32",
+            "depart_minutes": 752,
+            "arrive": "13:06",
+            "arrive_minutes": 786,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "819",
+            "depart": "14:32",
+            "depart_minutes": 872,
+            "arrive": "15:06",
+            "arrive_minutes": 906,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "821",
+            "depart": "15:32",
+            "depart_minutes": 932,
+            "arrive": "16:06",
+            "arrive_minutes": 966,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "823",
+            "depart": "16:32",
+            "depart_minutes": 992,
+            "arrive": "17:06",
+            "arrive_minutes": 1026,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "825",
+            "depart": "17:32",
+            "depart_minutes": 1052,
+            "arrive": "18:06",
+            "arrive_minutes": 1086,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "827",
+            "depart": "18:32",
+            "depart_minutes": 1112,
+            "arrive": "19:06",
+            "arrive_minutes": 1146,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "829",
+            "depart": "19:32",
+            "depart_minutes": 1172,
+            "arrive": "20:06",
+            "arrive_minutes": 1206,
+            "headsign": "Kenosha"
+          },
+          {
+            "train": "833",
+            "depart": "21:32",
+            "depart_minutes": 1292,
+            "arrive": "22:06",
+            "arrive_minutes": 1326,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "835",
+            "depart": "23:02",
+            "depart_minutes": 1382,
+            "arrive": "23:36",
+            "arrive_minutes": 1416,
+            "headsign": "Waukegan"
+          },
+          {
+            "train": "301",
+            "depart": "00:32",
+            "depart_minutes": 1472,
+            "arrive": "01:06",
+            "arrive_minutes": 1506,
+            "headsign": "Kenosha"
+          }
+        ]
+      }
+    }
+  }
+}
