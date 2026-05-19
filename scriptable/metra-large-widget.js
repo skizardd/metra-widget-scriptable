@@ -1,6 +1,6 @@
 // metra-large-widget.js - paste into Scriptable and use with a large widget.
 
-const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json";
+const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json?v=60b5df7";
 const CACHE_FILE = "metra-large-widget-schedule.json";
 const CACHE_MAX_AGE_HOURS = 24 * 7;
 

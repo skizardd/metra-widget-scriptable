@@ -54,7 +54,7 @@ This repo is configured for GitHub Pages from the `main` branch and `/docs` fold
 
 The Scriptable widget reads from `https://skizardd.github.io/metra-widget-scriptable/schedule.json`.
 
-The large Scriptable widget reads from `https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json`.
+The large Scriptable widget reads from `https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json?v=60b5df7`.
 
 Regenerate the large-widget commute JSON after refreshing `schedule.zip`:
 
