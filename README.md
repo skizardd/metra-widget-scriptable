@@ -33,6 +33,20 @@ KENILWORTH:outbound
 ## Next Steps
 
 1. Copy `scriptable/metra-widget.js` into Scriptable.
-2. Preview it in Scriptable with the fixture data.
-3. Publish `docs/schedule.json` with GitHub Pages.
+2. Preview it in Scriptable with the fixture data. While `DATA_URL` still points at `example.com`, the script uses its embedded fixture data automatically.
+3. Publish `docs/schedule.json` with GitHub Pages from the `main` branch and `/docs` folder.
 4. Replace the fixture with generated data from `build.py`.
+
+## GitHub Pages
+
+After pushing this repo to GitHub:
+
+1. Open the repository settings.
+2. Go to Pages.
+3. Set source to `Deploy from a branch`.
+4. Set branch to `main` and folder to `/docs`.
+5. Replace `DATA_URL` in `scriptable/metra-widget.js` with:
+
+```text
+https://YOUR_USER.github.io/YOUR_REPO/schedule.json
+```
