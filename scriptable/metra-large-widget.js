@@ -3,6 +3,10 @@
 const DATA_URL = "https://skizardd.github.io/metra-widget-scriptable/up-n-kenilworth-otc-large.json?v=60b5df7";
 const CACHE_FILE = "metra-large-widget-schedule.json";
 const CACHE_MAX_AGE_HOURS = 24 * 7;
+const BACKGROUND = new Color("#111318");
+const PRIMARY_TEXT = new Color("#F4F7FB");
+const SECONDARY_TEXT = new Color("#9AA4B2");
+const ACCENT = new Color("#5EC2FF");
 
 async function loadSchedule() {
   const fm = FileManager.local();
@@ -85,20 +89,26 @@ function upcomingTrips(leg, pattern, nowMinutes, limit) {
     .slice(0, limit);
 }
 
+function applyBaseStyle(widget) {
+  widget.backgroundColor = BACKGROUND;
+  widget.setPadding(14, 14, 12, 14);
+  widget.refreshAfterDate = new Date(Date.now() + 5 * 60 * 1000);
+}
+
 function addHeader(widget, schedule, pattern) {
   const row = widget.addStack();
   row.centerAlignContent();
 
   const title = row.addText("UP-N COMMUTE");
   title.font = Font.boldSystemFont(12);
-  title.textColor = Color.gray();
+  title.textColor = SECONDARY_TEXT;
   title.lineLimit = 1;
 
   row.addSpacer();
 
   const service = row.addText(pattern.toUpperCase());
   service.font = Font.systemFont(11);
-  service.textColor = Color.gray();
+  service.textColor = SECONDARY_TEXT;
   service.lineLimit = 1;
 
   widget.addSpacer(8);
@@ -107,7 +117,7 @@ function addHeader(widget, schedule, pattern) {
 function addSection(widget, leg, trips, nowMinutes) {
   const title = widget.addText(leg.short_label);
   title.font = Font.boldSystemFont(12);
-  title.textColor = Color.gray();
+  title.textColor = SECONDARY_TEXT;
   title.lineLimit = 1;
 
   widget.addSpacer(3);
@@ -115,7 +125,7 @@ function addSection(widget, leg, trips, nowMinutes) {
   if (trips.length === 0) {
     const empty = widget.addText("No more trains today");
     empty.font = Font.systemFont(12);
-    empty.textColor = Color.gray();
+    empty.textColor = SECONDARY_TEXT;
     widget.addSpacer(6);
     return;
   }
@@ -125,22 +135,22 @@ function addSection(widget, leg, trips, nowMinutes) {
     row.centerAlignContent();
 
     const train = row.addText(`#${trip.train}`);
-    train.font = Font.monospacedSystemFont(index === 0 ? 12 : 11);
-    train.textColor = index === 0 ? new Color("#5EC2FF") : Color.gray();
+    train.font = Font.systemFont(index === 0 ? 12 : 11);
+    train.textColor = index === 0 ? ACCENT : SECONDARY_TEXT;
     train.lineLimit = 1;
 
     row.addSpacer(8);
 
     const times = row.addText(`${formatTime(trip.depart_minutes)} to ${formatTime(trip.arrive_minutes)}`);
     times.font = Font.boldMonospacedSystemFont(index === 0 ? 13 : 12);
-    times.textColor = index === 0 ? new Color("#5EC2FF") : Color.white();
+    times.textColor = index === 0 ? ACCENT : PRIMARY_TEXT;
     times.lineLimit = 1;
 
     row.addSpacer();
 
     const relative = row.addText(relativeText(trip, nowMinutes));
     relative.font = Font.systemFont(index === 0 ? 12 : 11);
-    relative.textColor = Color.gray();
+    relative.textColor = SECONDARY_TEXT;
     relative.lineLimit = 1;
 
     widget.addSpacer(3);
@@ -154,7 +164,7 @@ function addFooter(widget, schedule) {
   const updated = schedule.generated_at.slice(0, 10);
   const footer = widget.addText(`${schedule.route.id} schedule - ${updated}`);
   footer.font = Font.systemFont(10);
-  footer.textColor = Color.gray();
+  footer.textColor = SECONDARY_TEXT;
   footer.lineLimit = 1;
 }
 
@@ -162,15 +172,16 @@ function buildWidget(schedule) {
   const now = new Date();
   const pattern = activeServicePattern(schedule, now);
   const nowMinutes = logicalNowMinutes(now);
-  const rowsPerSection = schedule.widget?.rows_per_section || 5;
+  const widgetConfig = schedule.widget || {};
+  const rowsPerSection = widgetConfig.rows_per_section || 5;
+  const sections = widgetConfig.sections || ["kenilworth_inbound", "otc_outbound"];
 
   const widget = new ListWidget();
-  widget.setPadding(14, 14, 12, 14);
-  widget.refreshAfterDate = new Date(Date.now() + 5 * 60 * 1000);
+  applyBaseStyle(widget);
 
   addHeader(widget, schedule, pattern);
 
-  for (const key of schedule.widget.sections) {
+  for (const key of sections) {
     const leg = schedule.legs[key];
     const trips = upcomingTrips(leg, pattern, nowMinutes, rowsPerSection);
     addSection(widget, leg, trips, nowMinutes);
@@ -192,10 +203,18 @@ async function main() {
     }
   } catch (err) {
     const widget = new ListWidget();
-    widget.setPadding(14, 14, 12, 14);
-    const text = widget.addText("Unable to load Metra schedule");
-    text.font = Font.systemFont(13);
-    text.textColor = Color.white();
+    applyBaseStyle(widget);
+
+    const title = widget.addText("Metra widget error");
+    title.font = Font.boldSystemFont(14);
+    title.textColor = ACCENT;
+
+    widget.addSpacer(6);
+
+    const text = widget.addText(String(err && err.message ? err.message : err));
+    text.font = Font.systemFont(11);
+    text.textColor = PRIMARY_TEXT;
+    text.lineLimit = 6;
 
     if (config.runsInWidget) {
       Script.setWidget(widget);
