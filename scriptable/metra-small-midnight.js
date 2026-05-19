@@ -12,11 +12,23 @@ const THEMES = {
     secondary: "#9AA4B2",
     accent: "#5EC2FF",
   },
+  "midnight-light": {
+    background: "#F3F6FA",
+    primary: "#18212C",
+    secondary: "#687789",
+    accent: "#2878C8",
+  },
   lakeshore: {
     background: "#081B22",
     primary: "#EAF8FA",
     secondary: "#8FB7C0",
     accent: "#42D6CA",
+  },
+  "lakeshore-light": {
+    background: "#EAF8F8",
+    primary: "#12343A",
+    secondary: "#5E858B",
+    accent: "#008C96",
   },
   signal: {
     background: "#10170F",
@@ -24,11 +36,23 @@ const THEMES = {
     secondary: "#A3B99A",
     accent: "#8FD14F",
   },
+  "signal-light": {
+    background: "#F1F8E8",
+    primary: "#1F321C",
+    secondary: "#6F8767",
+    accent: "#4F9D2F",
+  },
   ember: {
     background: "#1A1214",
     primary: "#FFF3F0",
     secondary: "#C7A3A8",
     accent: "#FF7A59",
+  },
+  "ember-light": {
+    background: "#FFF0EB",
+    primary: "#3A1D1A",
+    secondary: "#946B63",
+    accent: "#D94E2B",
   },
   daylight: {
     background: "#F7FAFC",
@@ -36,11 +60,23 @@ const THEMES = {
     secondary: "#667581",
     accent: "#0B75D1",
   },
+  "daylight-light": {
+    background: "#FFFFFF",
+    primary: "#102033",
+    secondary: "#637184",
+    accent: "#006BD6",
+  },
   rose: {
     background: "#2A111F",
     primary: "#FFF1F7",
     secondary: "#D8A8BE",
     accent: "#FF8CC6",
+  },
+  "rose-light": {
+    background: "#FFF0F8",
+    primary: "#3B1830",
+    secondary: "#9A6482",
+    accent: "#D9368B",
   },
 };
 

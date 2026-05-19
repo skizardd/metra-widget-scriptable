@@ -1,0 +1,17 @@
+{
+    "widget_size":  "large",
+    "theme":  "ember-light",
+    "script":  "metra-large-ember-light.js",
+    "colors":  {
+                   "background":  "#FFF0EB",
+                   "primary":  "#3A1D1A",
+                   "secondary":  "#946B63",
+                   "accent":  "#D94E2B"
+               },
+    "roles":  {
+                  "background":  "Widget background fill",
+                  "primary":  "Standard departure and arrival times",
+                  "secondary":  "Headers, service pattern, train numbers, relative times, footer, and muted connector text",
+                  "accent":  "Next train in each schedule and error title text"
+              }
+}

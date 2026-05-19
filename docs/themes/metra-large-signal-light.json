@@ -1,0 +1,17 @@
+{
+    "widget_size":  "large",
+    "theme":  "signal-light",
+    "script":  "metra-large-signal-light.js",
+    "colors":  {
+                   "background":  "#F1F8E8",
+                   "primary":  "#1F321C",
+                   "secondary":  "#6F8767",
+                   "accent":  "#4F9D2F"
+               },
+    "roles":  {
+                  "background":  "Widget background fill",
+                  "primary":  "Standard departure and arrival times",
+                  "secondary":  "Headers, service pattern, train numbers, relative times, footer, and muted connector text",
+                  "accent":  "Next train in each schedule and error title text"
+              }
+}

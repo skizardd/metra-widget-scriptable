@@ -68,11 +68,17 @@ Set the large widget parameter to one of these theme names:
 
 ```text
 midnight
+midnight-light
 lakeshore
+lakeshore-light
 signal
+signal-light
 ember
+ember-light
 daylight
+daylight-light
 rose
+rose-light
 ```
 
 The same values also work as `theme=midnight`, `theme=lakeshore`, etc.
@@ -86,12 +92,31 @@ metra-small-signal.js
 metra-small-ember.js
 metra-small-daylight.js
 metra-small-rose.js
+metra-small-midnight-light.js
+metra-small-lakeshore-light.js
+metra-small-signal-light.js
+metra-small-ember-light.js
+metra-small-daylight-light.js
+metra-small-rose-light.js
 metra-large-midnight.js
 metra-large-lakeshore.js
 metra-large-signal.js
 metra-large-ember.js
 metra-large-daylight.js
 metra-large-rose.js
+metra-large-midnight-light.js
+metra-large-lakeshore-light.js
+metra-large-signal-light.js
+metra-large-ember-light.js
+metra-large-daylight-light.js
+metra-large-rose-light.js
+```
+
+Light theme palette JSON files are generated under `docs/themes/`, one per widget size and theme. Example:
+
+```text
+docs/themes/metra-small-rose-light.json
+docs/themes/metra-large-rose-light.json
 ```
 
 Regenerate them after changing either generic widget script:
@@ -103,11 +128,17 @@ powershell -ExecutionPolicy Bypass -File scripts/build_themed_widget_scripts.ps1
 | Theme | Background | Primary Text | Secondary Text | Accent |
 | --- | --- | --- | --- | --- |
 | `midnight` | `#111318` | `#F4F7FB` | `#9AA4B2` | `#5EC2FF` |
+| `midnight-light` | `#F3F6FA` | `#18212C` | `#687789` | `#2878C8` |
 | `lakeshore` | `#081B22` | `#EAF8FA` | `#8FB7C0` | `#42D6CA` |
+| `lakeshore-light` | `#EAF8F8` | `#12343A` | `#5E858B` | `#008C96` |
 | `signal` | `#10170F` | `#F1F8EA` | `#A3B99A` | `#8FD14F` |
+| `signal-light` | `#F1F8E8` | `#1F321C` | `#6F8767` | `#4F9D2F` |
 | `ember` | `#1A1214` | `#FFF3F0` | `#C7A3A8` | `#FF7A59` |
+| `ember-light` | `#FFF0EB` | `#3A1D1A` | `#946B63` | `#D94E2B` |
 | `daylight` | `#F7FAFC` | `#17212B` | `#667581` | `#0B75D1` |
+| `daylight-light` | `#FFFFFF` | `#102033` | `#637184` | `#006BD6` |
 | `rose` | `#2A111F` | `#FFF1F7` | `#D8A8BE` | `#FF8CC6` |
+| `rose-light` | `#FFF0F8` | `#3B1830` | `#9A6482` | `#D9368B` |
 
 Color roles:
 

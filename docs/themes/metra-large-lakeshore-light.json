@@ -1,0 +1,17 @@
+{
+    "widget_size":  "large",
+    "theme":  "lakeshore-light",
+    "script":  "metra-large-lakeshore-light.js",
+    "colors":  {
+                   "background":  "#EAF8F8",
+                   "primary":  "#12343A",
+                   "secondary":  "#5E858B",
+                   "accent":  "#008C96"
+               },
+    "roles":  {
+                  "background":  "Widget background fill",
+                  "primary":  "Standard departure and arrival times",
+                  "secondary":  "Headers, service pattern, train numbers, relative times, footer, and muted connector text",
+                  "accent":  "Next train in each schedule and error title text"
+              }
+}
